@@ -1,0 +1,30 @@
+<div class="container padding">
+    <div class="row">
+        <div class="col-sm-12">
+            <nav class="navbar navbar-dark bg-dark">
+                <a class="navbar-brand">Movies Search Engine</a>
+            </nav>
+            <hr>
+            <div class="search">
+                <input class="form-control" type="text" name="search" placeholder="Search" (keyup)="searchTerm$.next($event.target.value)">
+            </div>
+        </div>
+        <div class="col-xs-3 card-edit" *ngFor="let result of results['Search']">
+            <div class="card">
+                <img class="card-img-top" src="{{result['Poster']}}" alt="Card image" style="width:100%; height:318px">
+                <div class="card-body">
+                    <h4 class="card-title">{{result['Title']}}</h4>
+                    <p class="card-text">Year: {{result['Year']}}</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <hr>
+        <!-- <nav class="navbar navbar-dark bg-dark"> </nav> -->
+
+    </div>
+</div>
+
+<!-- cc4d0ae7 -->
